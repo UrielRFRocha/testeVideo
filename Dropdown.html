@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown</title>
+    <style>
+        * {
+            margin: 10px;
+            padding: 20px;
+            margin-top: 2px;
+
+
+
+        }
+
+        #navegação-principal nav {
+            position: relative;
+            font-family: monospace;
+            float: center;
+            width: 250%;
+
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(112, 114, 2));
+            background-attachment: fixed;
+
+
+        }
+
+        #menu-principal {
+            list-style-type: none;
+            padding-left: 0;
+
+        }
+
+        #menu-principal li {
+            background-color: rgb(1, 1, 7);
+            display: block;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 1.0s;
+            border-radius: 20px;
+
+        }
+
+        #menu-principal li a {
+            color: rgb(92, 252, 18);
+            text-decoration: none;
+        }
+
+        .dropdown {
+            visibility: hidden;
+            opacity: 0;
+            min-width: 0.5%;
+            position: absolute;
+            transition: absolute;
+            transition: all 0.5 ease;
+            margin-top: 0.1rem;
+            left: center;
+            display: none;
+            box-shadow: 0px 0px 16px 0px rgb(251, 255, 0);
+            padding: 20px 20px;
+            z-index: 1;
+            top: 35%;
+
+        }
+
+        .dropdown {
+            clear: both;
+            width: 100%;
+
+
+        }
+
+        #menu-principal li:hover,
+        #menu-principal li:focus-within {
+            background-color: rgb(21, 29, 0);
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+
+        #menu-principal li a:hover {
+            color: rgb(207, 230, 0);
+        }
+
+
+        #menu-principal li:hover>ul,
+        #menu-principal li:focus-within,
+        .dropdown ul:hover,
+        .dropdown ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+
+        }
+
+        article {
+            text-align: center;
+            font-size: 30pt;
+
+        }
+
+        section img {
+
+            height: 100vh;
+            width: 100vh;
+            background-size: cover;
+
+
+        }
+
+        section {
+
+            text-align: justify;
+            font-size: 12pt;
+            font-family: Arial;
+            color: rgb(255, 255, 255);
+            background-size: cover;
+
+        }
+
+        div {
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" div>
+
+        <na id="navegação-principal">
+            <ul id="menu-principal">
+
+                <li><a href="#"><span class="fa fa-home"></span>Home</a></li>
+
+                <li><a href="#">Formações</a>
+
+                    <ul class="dropdown">
+                        <img src="F.jpg" ht="120" width="250" alt="">
+
+                        <li><a
+                                href="https://agriq.com.br/tecnico-agricola/#:~:text=O%20t%C3%A9cnico%20agr%C3%ADcola%20%C3%A9%20o,(procedimentos%20e%20normas%20t%C3%A9cnicas).">Tecnico
+                                Agricola</a></li>
+                        <li><a
+                                href="https://midiasstoragesec.blob.core.windows.net/001/2018/05/brigada-de-incndio_conceito-e-organizao.pdf">Brigadista</a>
+                        </li>
+                        <li><a
+                                href="https://novaescola.org.br/conteudo/47/quem-e-o-e-que-faz-o-orientador-educacional?gclid=EAIaIQobChMIrbeNm6rB9wIVCkWRCh0kWQyZEAAYASAAEgJ29_D_BwE">Orientador
+                                Educacional</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Habilidades Culinárias</a>
+
+                    <ul class="dropdown">
+                        <img src="S.jpg" ht="120" width="250" alt="">
+                        <li><a
+                                href="https://www.tudogostoso.com.br/receita/23026-pave-de-bolacha-de-maizena.html">Pavê</a>
+                        </li>
+                        <li><a href="">Espera Marido</a></li>
+                        <li><a href="https://www.tudogostoso.com.br/receita/3222-mousse.html">Mousse Diversos</a></li>
+                        <li><a href="https://www.tudogostoso.com.br/receita/18840-sorvete-de-mandioca.html">Sorvete de
+                                Mandica</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">Contatos</a>
+
+                    <ul class="dropdown">
+                        <img src="R.jpg" ht="120" width="250" alt="">
+                        <li><a
+                                href="file:///C:/Users/Augusto/Documents/Inrodu%C3%A7%C3%A3o%20a%20programa%C3%A7%C3%A3o/Exemplo%202/html/Novo.html">Instagram</a>
+                        </li>
+                        <li><a href="https://web.whatsapp.com/send?phone=55992008622">Whatzapp</a>
+                        <li><a
+                                href="file:///C:/Users/Augusto/Documents/Inrodu%C3%A7%C3%A3o%20a%20programa%C3%A7%C3%A3o/Exemplo%202/html/Mais%20Um.html">Facebook</a>
+                        </li>
+
+
+                </li>
+                <i class="fa fa-whatsapp"></i>
+            </ul>
+            </li>
+
+            <li><a href="#">Esportes</a>
+
+                <ul class="dropdown">
+                    <img src="M.jpg" ht="120" width="250" alt="">
+                    <li><a href="https://mundoeducacao.uol.com.br/educacao-fisica/futebol-2.htm">Futebol</a></li>
+                    <li><a href="https://www.todamateria.com.br/voleibol/">Vôlei</a></li>
+                    <li><a href="https://www.todoestudo.com.br/educacao-fisica/futevolei/amp">Futvôlei</a></li>
+                    <li><a href="https://www.todamateria.com.br/basquetebol/">Basquete</a></li>
+                </ul>
+            </li>
+            </ul>
+
+            </nav>
+
+            <article>
+                <p>
+                </p>
+
+            </article>
+
+            <section>
+
+                <img src="B.jpg" ht="120" width="250" alt="">
+
+                <p> A prática de esportes beneficia grandiosamente as pessoas e até mesmo a sociedade, pois reduz a
+                    probabilidade de aparecimento de doenças, contribui para a formação física e psíquica além de
+                    desenvolver e melhorar tais formações.
+
+                    Na adolescência, as pessoas são influenciadas pelo consumismo, problemas psicológicos, hábitos
+                    prejudiciais e outros que também influenciam as demais faixas etárias, gerando conflitos internos
+                    que
+                    desviam valores e aprendizagens antes obtidos. É neste processo que o esporte mostra sua grande
+                    contribuição à sociedade.</p>
+
+                <p> Cada esporte possui suas particularidades que envolvem as pessoas e as fazem optar por qual
+                    praticar. Os
+                    esportes influenciam no desenvolvimento saudável dessas e os distanciam da mentalidade distorcida
+                    que
+                    hoje se prega no mundo, e ainda faz com que as pessoas se distanciem da criminalidade que está
+                    presente
+                    em todos os locais de forma bastante organizada e sedutora.
+                </p>
+
+                <img src="P.jpg" ht="120" width="250" alt="">
+                <p>
+                    Muitos profissionais são reverenciados por terem se dedicado a uma profissão e crescido nela, a
+                    ponto
+                    de se tornarem figuras muito importantes em seu segmento. Ok, isso é muito bacana, mas, de repente,
+                    ter
+                    várias carreiras pode ser bem interessante também. Essa capacidade, além de mostrar que você é
+                    aberto a
+                    novos desafios e tem flexibilidade, deixa a vida mais leve e permite que você se reinvente fazendo
+                    coisas
+                    que nunca imaginou.
+                </p>
+
+                <p>
+                    Existe, inclusive, um termo em inglês que designa uma pessoa multifacetada. “Slash” é usado para
+                    definir
+                    uma pessoa híbrida, que mistura hobbies com profissão. Como exemplo, podemos citar um jornalista ou
+                    advogado que também é coach e, ainda, toca banjo como freelancer.
+                </p>
+
+                <p>
+                    A aceitação dessa carreira, no entanto, ainda não é total. Muitas pessoas relacionam essas diversas
+                    habilidades a uma ideia de “estar perdido”, “sem rumo” e, por isso, a pessoa investe em diversas
+                    profissões, o que não é verdade na maioria dos casos. É exatamente o contrário. Esse profissional é
+                    tão completo que consegue, inclusive, administrar outras carreiras. Essa experiência ajuda até mesmo
+                    a aprimorar sua atuação na carreira.
+                </p>
+
+                <p>“Profissionais multifacetados serão cada vais mais valorosos. Abrace o fato de ser uma pessoa
+                    híbrida:
+                    você não está sozinho e tem todos os motivos para se sentir orgulhoso”, recomenda Marshall
+                    Goldsmith.
+                </p>
+
+
+                <img src="C.jpg" ht="120" width="250" alt="">
+
+
+                <p>
+                    A culinária é a arte de cozinhar ou confeccionar alimentos e foi evoluindo de acordo com a história
+                    da
+                    humanidade e possui características diferentes em cada cultura.
+                </p>
+
+                <p>
+                    A culinária reflete os costumes de um povo e também se reflete em outros aspectos culturais como as
+                    religiões e a política. Não somente os alimentos, mas também os utensílios e as técnicas utilizados
+                    na
+                    culinária fazem parte de um acervo cultural particular.
+                </p>
+
+                <p> De acordo com as mudanças comportamentais da humanidade, e com o advento da sociedade
+                    industrializada,
+                    com as pessoas trabalhando longe de casa e sem tempo para cozinhar e fazer suas refeições, surgiu a
+                    necessidade da comida rápida – ou fast food. Em contrapartida, com as mudanças nos costumes
+                    alimentares
+                    das pessoas também surgiram novas regras, e até mesmo leis, para a regulamentação da produção e
+                    venda dos
+                    alimentos da sociedade industrializada.
+                </p>
+            </section>
+
+
+            <div>
+                <h3>Desenvolvedor: Uriel</h3>
+            </div>
+
+</body>
+
+</html>
