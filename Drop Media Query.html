@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1">
+    <title>Exemplo de uma pagina responsiva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        p {
+            line-height: 1.1em;
+        }
+
+        p+p {
+            text-indent: 1.5em;
+            margin-top: 1.5em;
+        }
+
+        #navegacao-principal {
+            position: relative;
+            font-family: monospace;
+            float: left;
+            display: block;
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        #menu-principal {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0px;
+        }
+
+        #menu-principal li {
+            background-color: #333;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            transition-duration: 0.5s;
+        }
+
+        #menu-principal {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            text-decoration: none;
+            list-style: none;
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0);
+        }
+
+        .dropdown li {
+            clear: both;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .dropdown li a {
+            text-decoration: none;
+            text-align: right;
+        }
+
+        #menu-principal li:hover,
+        #menu-principal li:focus-within {
+            background-color: #4CAF50;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #menu-principal li a:hover {
+            color: #F00;
+        }
+
+
+        /*Controlar a exibição do dropdown*/
+        #menu-principal li:hover>ul,
+        #menu-principal li:focus-within>ul,
+        .dropdown ul:hover,
+        .dropdown ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        /*Ajistar o contedo para Smartphones*/
+        @media screen and (max-width:480px) {
+            body {
+                max-width: 480px;
+                font-size: 1.0em;
+            }
+
+            #menu-pribcipal {
+                width: auto;
+                height: auto;
+                background-color: rgb(204, 60, 60);
+            }
+
+            #menu-principal li {
+                background-color: tomato;
+                text-decoration: none;
+                width: 100%;
+                float: none;
+            }
+
+            #menu-principal li a {
+                color: #FFF;
+                text-align: left;
+                display: block;
+                outline: none;
+            }
+
+
+            #menu-principal li:hover,
+            #menu-principal li:focus-within #menu-principal li a:hover {
+                cursor: pointer;
+                font-weight: bold;
+                color: #F00;
+                background-color: rgb(230, 140, 31);
+                transition: 0.3s;
+                left: 10px;
+
+            }
+
+            .dropdown {
+                position: static;
+                left: 0px;
+                background-color: rgb(204, 60, 60);
+                list-style: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <na id="navegação-principal">
+        <ul id="menu-principal">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre Mim</a>
+                <ul>
+                    <li><a href="#">Meus Projetos</a></li>
+                    <li><a href="#">Meu Currículo</a></li>
+                    <li><a href="#">Meus Hobies</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Entre em cntato</a>
+                <ul>
+                    <li><a href="#">Meus Projetos</a></li>
+                    <li><a href="#">Meu Currículo</a></li>
+                    <li><a href="#">Meus Hobies</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Redes Sociais</a></li>
+
+            <article>
+
+                <h1>Exemplo de uma nav customizando como um menu horizontal</h1>
+                <p>O Elemento NAV é o elemento semântico responsável por criar um conjunto de links para a navegação em
+                    um site
+                </p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut ligula ac libero accumsan gravida
+                    at ac
+                    massa. Donec dignissim nisi a finibus ultrices.
+                    Aenean elementum tempor fermentum. Ut sit amet tempor ligula, nec ornare augue. Donec sit amet quam
+                    in justo
+                    porttitor egestas et a risus. Ut consequat
+                    diam a ex sodales, at condimentum purus elementum. Praesent aliquet scelerisque consequat. Cras sed
+                    neque in
+                    ex efficitur accumsan. Aenean nisl mi, aliquet
+                    eu urna nec, cursus bibendum justo. Sed consectetur augue et gravida mollis. Praesent tincidunt,
+                    massa ut
+                    imperdiet auctor, urna urna sodales turpis,
+                    non feugiat turpis ante in ipsum. Nullam imperdiet enim quam, ut venenatis tortor vulputate nec.
+                    Maecenas
+                    pharetra, enim non pharetra rutrum, lorem
+                    felis laoreet velit, nec auctor diam risus auctor dolor.</p>
+
+                <p>Ut tincidunt ligula lectus, nec viverra sapien ullamcorper nec. Ut gravida libero eget neque volutpat
+                    faucibus. Pellentesque a dui magna. Praesent at nisi nec odio
+                    tristique tempor. Fusce accumsan lorem sed ultrices egestas. Pellentesque et faucibus urna, nec
+                    congue diam.
+                    Vivamus malesuada tortor massa. Aenean iaculis odio
+                    quis pretium consectetur. Pellentesque ultricies luctus gravida. Nulla eu nunc pulvinar, venenatis
+                    nunc at,
+                    mollis velit. Aliquam blandit risus ligula, quis feugiat
+                    nisi dictum quis. Fusce semper turpis quis condimentum varius. Maecenas et mi sit amet lorem
+                    vehicula
+                    dignissim eget eu tortor. Maecenas at quam sit amet erat dignissim
+                    tempus non vitae sem. Nulla accumsan tellus at ipsum cursus sodales sed vel tortor.</p>
+
+                <p>Quisque feugiat laoreet ex sit amet lacinia. Phasellus finibus, turpis non fermentum aliquet, neque
+                    purus
+                    faucibus eros, in ornare mi orci et ex. Morbi egestas pulvinar
+                    neque, nec laoreet tortor mattis at. Aenean tincidunt tincidunt tortor et bibendum. Ut interdum
+                    dolor quis
+                    posuere convallis. Nulla mollis sem turpis, nec efficitur
+                    ipsum pharetra sit amet. Vestibulum sagittis accumsan metus. Nulla dignissim pretium mi nec
+                    hendrerit. Fusce
+                    consectetur velit a vehicula condimentum.</p>
+
+                <p>Suspendisse rutrum faucibus lectus quis rutrum. Cras risus nunc, auctor eget hendrerit eget,
+                    efficitur sed
+                    mi. Integer sit amet sem lacinia, luctus arcu in, vestibulum orci.
+                    Ut aliquam magna vitae mi euismod elementum. Phasellus nulla urna, placerat a congue ac, aliquet a
+                    eros.
+                    Phasellus sed massa vitae justo laoreet ornare eget eget ante.
+                    Aliquam vitae nisi non purus sodales porttitor. Donec sit amet venenatis sem, iaculis efficitur dui.
+                    Suspendisse ut varius nibh. Nunc sit amet ullamcorper ex. Mauris et
+                    consectetur odio, nec ornare augue. Etiam auctor viverra nisi. Duis vel interdum mauris. Vestibulum
+                    imperdiet nibh felis, in pellentesque ligula sodales fermentum. Morbi
+                    sagittis scelerisque augue quis condimentum. Praesent nibh elit, bibendum non dolor sed, laoreet
+                    cursus
+                    velit.</p>
+
+                <p>Integer in tincidunt eros, non vulputate nisl. Ut id nibh at orci mollis porta quis a massa. Quisque
+                    hendrerit tortor quis nulla porta mattis. Integer ac urna nunc. Fusce pretium
+                    eleifend nibh, et consequat justo tincidunt sit amet. Proin pellentesque pharetra venenatis.
+                    Curabitur
+                    interdum accumsan magna, ac fringilla urna ornare in. Aliquam finibus lectus
+                    in nulla ornare, vitae ullamcorper lacus dictum. Nunc blandit faucibus magna vitae egestas. Proin id
+                    venenatis leo, egestas fermentum justo. Etiam vel faucibus nunc, eget varius justo.
+                    Duis sed sem pharetra, iaculis ligula quis, condimentum tortor.</p>
+            </article>
+</body>
+
+</html>
